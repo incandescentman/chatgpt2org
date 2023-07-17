@@ -37,7 +37,7 @@
    (setq org-content (replace-regexp-in-string ":PROPERTIES:\n\\(.*\n\\)*?:END:" "" org-content))
    (setq org-content (replace-regexp-in-string ":PROPERTIES:\\([^\000]*?\\):END:" "" org-content))
 
-   ;; Fix the bug
+   ;; Fix a bug involved with parsing code blocks
    (setq org-content (replace-regexp-in-string "\\(#\\+begin_example\\)\n\\s-*\\([a-zA-Z]*\\)Copy code" "\\1 \\2\n" org-content))
 
    ;; Replace "=" enclosed text with "~" enclosed text
@@ -49,7 +49,6 @@
 
    (kill-new org-content)
    (yank)))
-
 
 
 ;; This part is stilla kinda experimental:

@@ -4,7 +4,7 @@ ChatGPT2Org is an Emacs package that allows you to copy HTML content from a brow
 
 ** Motivation
 
-ChatGPT offers a "copy" feature that allows you to copy its responses in Markdown format. But you gotta do this separately for each response, which is hella time-consuming if you want to copy a whole entire conversation. I created ChatGPT2Org to enable ya to copy an entire ChatGPT conversation at once and facilitate the direct pasting of this content into Emacs in nice, nicely-formatted org-mode syntax.
+ChatGPT offers a "copy" button that allows you to copy its answers in Markdown format. But you gotta do this separately for each response, which is hella time-consuming if you want to copy-paste a whole entire conversation into org-mode. I (helped to) create ChatGPT2Org to enable ya to copy an entire ChatGPT conversation at once and paste it directly into Emacs in nice, nicely-formatted org-mode syntax.
 
 ** Features
 
