@@ -50,6 +50,28 @@
    (kill-new org-content)
    (yank)))
 
+
+
+;; This part is stilla kinda experimental:
+(defun html2org-clipboard-and-unfill-paragraph ()
+ "Convert clipboard contents from HTML to Org, remove base64-encoded images, unfill paragraph and then paste (yank)."
+ (interactive)
+ (html2org-clipboard)
+ (let* ((org-content (car kill-ring))) ;; get the most recent item in the kill ring, which is the result of html2org-clipboard
+
+ ;; Unfill paragraph
+  (with-temp-buffer
+  (insert org-content)
+  (goto-char (point-min))
+  (while (not (eobp))
+   (unfill-paragraph)
+   (forward-paragraph))
+  (setq org-content (buffer-string)))
+
+  (kill-new org-content)
+  (yank)))
+
+
 (provide 'chatgpt2org)
 
 ;;; chatgpt2org.el ends here
