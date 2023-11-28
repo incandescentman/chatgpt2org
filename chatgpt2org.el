@@ -33,6 +33,14 @@
    (setq org-content (replace-regexp-in-string " " " " org-content))
    (setq org-content (replace-regexp-in-string "\\\\\\\\" "" org-content))
 
+
+   (setq org-content (replace-regexp-in-string "”" "\"" org-content))
+   (setq org-content (replace-regexp-in-string "Okay" "OK" org-content))
+   (setq org-content (replace-regexp-in-string "okay" "OK" org-content))
+   (setq org-content (replace-regexp-in-string "“" "\"" org-content))
+
+
+
    ;; Remove properties
    (setq org-content (replace-regexp-in-string ":PROPERTIES:\n\\(.*\n\\)*?:END:" "" org-content))
    (setq org-content (replace-regexp-in-string ":PROPERTIES:\\([^\000]*?\\):END:" "" org-content))
